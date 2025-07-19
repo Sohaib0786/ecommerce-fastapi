@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fastapi-ecommerce
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MONGO_URL
+        value: mongodb+srv://fastapi_user:<password>@cluster0.mongodb.net/ecommerce
